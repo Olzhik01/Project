@@ -73,14 +73,10 @@ body{
 
 
 
-		@media screen and (max-width: 800px) {
-
-			#logo{
-				font-size: 20px;
-				position: absolute;
-				top:25px;
-
-			}
+		@media screen and (max-width: 1230px) {
+			
+			
+			
 			.header_links a{
 				position:relative;
 				top:5px;
@@ -102,7 +98,7 @@ body{
 
 		}
 
-		@media screen and (max-width: 800px) {
+		@media screen and (max-width: 1230px) {
   			.header_links.responsive {
   				position: absolute;
   				right: 20px;
@@ -126,7 +122,109 @@ body{
     			text-align: center;
     			margin-bottom: 5px;
   			}
-}
+		}
+
+		@media screen and (max-width: 870px){
+			#logo{
+				position: absolute;
+				font-size: 25px;
+				top:21px;
+			}
+
+			.search_container{
+				position: absolute;
+				left:200px;
+				top:21px;
+			
+				
+			}
+
+			.search_container input[type=text]{
+				width: 300px;
+			}
+		
+		}
+
+
+		@media screen and (max-width: 670px){
+			#logo{
+				position: absolute;
+				font-size: 23px;
+				top:25px;
+				left:15px;
+			}
+
+			.search_container{
+				position: absolute;
+				left:130px;
+				top:26px;	
+			}
+
+
+			.search_container input[type=text]{
+				width: 200px;
+				height: 25px;
+			}
+
+			.search_container button{
+				height: 29px;
+			}
+		}
+
+
+		@media screen and (max-width: 480px){
+			.search_container{
+				position: absolute;
+				left:120px;
+				top:26px;	
+			}
+
+			.search_container input[type=text]{
+				width: 150px;
+				height: 25px;
+			}
+
+			.search_container button{
+				height: 29px;
+			}
+
+			
+
+ 		 	.header_links.responsive {
+  				position: absolute;
+  				right: 0px;
+  				width: 130px;
+  				background-color: orange;
+  			}
+
+  			.header_links.responsive .icon {
+   			 	position:relative;
+   			 	top:0px;
+   			 	right: 0px;
+    		
+    		}
+
+    		.header_links .icon{
+    			position: absolute;
+    			right: -20px;
+    		}
+
+    		.header_links.responsive a {
+    			font-size: 15px;
+  			}
+
+
+		}
+
+		@media screen and (max-width: 385px){
+
+			.search_container {
+				display: none;
+			}
+
+			
+
+		}
 
 
 	</style>
