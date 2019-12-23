@@ -1,13 +1,11 @@
 @media screen and (max-width: 1230px) {
 			
-			
-			
-			.header_links a{
-				position:relative;
-				top:5px;
-				
+		.header_links a{
+			position:relative;
+			top:5px;
+							
 
-			}
+		}
  		 	.header_links a:not(:first-child) {
  		 		display: none;
 
@@ -49,26 +47,63 @@
   			}
 		}
 
-		@media screen and (max-width: 870px){
-			#logo{
-				position: absolute;
-				font-size: 25px;
-				top:21px;
-			}
 
-			.search_container{
-				position: absolute;
-				left:200px;
-				top:21px;
+		@media only screen and (max-width: 900px){
+			
+
+			.withus ul{
 			
 				
+				justify-items: start;
+				list-style-type: circle;
+			}
+			.withus li{
+				justify-self: start;
 			}
 
-			.search_container input[type=text]{
-				width: 300px;
-			}
-		
+
+			
 		}
+
+
+
+		@media screen and (max-width: 890px){
+      		
+      		#logo{
+        		position: absolute;
+        		font-size: 25px;
+        		top:21px;
+      		}
+
+      		.search_container{
+        		position: absolute;
+        		left:160px;
+       			top:21px;
+        		width: 400px;
+        
+      		}
+
+      		.search_container input[type=text]{
+        		width: 300px;
+
+      		}
+    
+    	} 
+
+
+    	@media screen and (max-width: 696px){
+    		#contacts_logo{
+    			display: grid;
+    			justify-items: center;
+    			
+    		}
+
+    		.get_in_touch{
+    			line-height: 1.6;
+
+    		}
+
+    	} 
 
 
 		@media screen and (max-width: 670px){
@@ -94,123 +129,207 @@
 			.search_container button{
 				height: 29px;
 			}
-		}
 
-
-		@media screen and (max-width: 480px){
-			.search_container{
-				position: absolute;
-				left:120px;
-				top:26px;	
+			#big_word{
+				font-size: 20px;
 			}
 
-			.search_container input[type=text]{
-				width: 150px;
-				height: 25px;
+			#small_word{
+				font-size: 10px;
 			}
 
-			.search_container button{
-				height: 29px;
+			#truck_icon{
+				font-size: 20px;
 			}
-
-			
-
- 		 	.header_links.responsive {
-  				position: absolute;
-  				right: 0px;
-  				width: 130px;
-  				background-color: orange;
-  			}
-
-  			.header_links.responsive .icon {
-   			 	position:relative;
-   			 	top:0px;
-   			 	right: 0px;
-    		
-    		}
-
-    		.header_links .icon{
-    			position: absolute;
-    			right: -20px;
-    		}
-
-    		.header_links.responsive a {
-    			font-size: 15px;
-  			}
-
 
 		}
 
-		@media screen and (max-width: 385px){
-
-			.search_container {
-				display: none;
-			}
+    
 
 
-		}
+	@media screen and (max-width: 480px){
+      .search_container{
+        position: absolute;
+        left:120px;
+        top:26px; 
+      }
+
+      .search_container input[type=text]{
+        width: 150px;
+        height: 25px;
+      }
+
+      .search_container button{
+        height: 29px;
+      }
+
+      
+
+      .header_links.responsive {
+          position: absolute;
+          right: 0px;
+          width: 130px;
+          background-color: orange;
+        }
+
+        .header_links.responsive .icon {
+          position:relative;
+          top:0px;
+          right: 0px;
+        
+        }
+
+        .header_links .icon{
+          position: absolute;
+          right: -20px;
+        }
+
+        .header_links.responsive a {
+          font-size: 15px;
+        }
 
 
-		@media screen and (max-width: 355px){
-			.footer{
-				display: grid;
-				grid-template-columns: repeat(1,1fr);
-				grid-gap: 0px;
-				font-size: 15px;
-			}
+    }
 
-			#useful_links_logo{
-				margin: 0;
-		  		display: grid;
-		  		justify-self:center; 
-				font-size: 18px;
-			}
+    @media screen and (max-width: 385px){
 
-			.useful_links{
-			
-				display: grid;
-				align-self:center;
+      .search_container {
+        display: none;
+      }
 
 
-			}
-
-			.links li{
-				margin-left: -30px;
-				margin-bottom: 5px; 
-			}
+    }
 
 
-			#contacts_logo{
-				margin: 0;
-				font-size: 18px;
-				display: grid;
-				justify-self: center;
-		}
+   @media screen and (max-width: 365px){
 
 
+   	.get_in_touch{
+   		/*justify-items: center;*/
+   	}
 
-		#follow_word{
-			font-size: 18px;
-			
-			display: grid;
-			justify-self: center;
-			align-self: center;
-			grid-column-start: 1;
-			grid-column-end: -1;
+    /*  .footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 0px;
+        font-size: 15px;
+      }
 
-		}
-		
-		.follow_logo {
-			
-			display: grid;
+      #useful_links_logo{
+        margin: 0;
+          display: grid;
+          justify-self:center; 
+        font-size: 18px;
+      }
 
-			grid-gap: 3px;
-
-
-		}
-
+      .useful_links{
+      
+        display: grid;
+        align-self:center;
 
 
+      }
+
+      .links li{
+        margin-left: -30px;
+        margin-bottom: 5px; 
+      }
+	*/
+
+      
 	}
+	@media screen and (max-width: 355px){
+      .footer{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 0px;
+        font-size: 15px;
+      }
+
+      #useful_links_logo{
+        margin: 0;
+          display: grid;
+          justify-self:center; 
+        font-size: 18px;
+      }
+
+      .useful_links{
+      
+        display: grid;
+        align-self:center;
+
+
+      }
+
+      .links li{
+        margin-left: -30px;
+        margin-bottom: 5px; 
+      }
+
+
+      #contacts_logo{
+        margin: 0;
+        font-size: 18px;
+        display: grid;
+        justify-self: center;
+    }
+
+
+
+    #follow_word{
+      font-size: 18px;
+      
+      display: grid;
+      justify-self: center;
+      align-self: center;
+      grid-column-start: 1;
+      grid-column-end: -1;
+
+    }
+    
+    .follow_logo {
+      
+      display: grid;
+
+      grid-gap: 3px;
+
+
+    }
+}
+
+
+
+  @media screen and (max-width: 200px){
+      #logo{
+        position: absolute;
+        top:10px;
+        left:20px;
+      }
+      
+
+      .header_links {
+        position: absolute;
+        left:10px;
+        top:40px;
+        
+        
+      }
+    }
+
+    
 
 		
+
+		
+
+		
+
+
+		
+
+  
+
+    
+    
+    
+
