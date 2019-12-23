@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<title>Главная страница</title>
 <meta charset="utf-8">
+<link rel="icon" href="img/favicon.ico" type="image/ico">
+<link rel="stylesheet" type="text/css" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="css/media.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+
+<style type="text/css">
+
+    
 
 
-	
-	<style type="text/css">
+
+		
+
+
+		
+
+
+		
+		
 		*{
 			font-family: "Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif;
 		}
@@ -25,7 +37,8 @@
 
 		/*Header*/
 		.header{
-			background-color: orange;
+			position: relative;
+			background-color: #FF8C00;
 			height: 70px;
 
 
@@ -35,7 +48,7 @@
 		#logo{
 			text-align: center;
 			text-decoration: none;
-			color:white;
+			color:black;
 			
 			position: absolute;
 			left:30px;
@@ -75,7 +88,7 @@
 		.header_links a{
 
 			text-decoration: none;
-			color:white;
+			color:black;
 			text-align: center;
 			font-size: 17px;
 
@@ -85,21 +98,28 @@
 		}
 
 		.header_links a:hover{
-			border-bottom: 3px solid red;
+			border-bottom: 3px solid white;
 		}
 
 
 		.header_links .icon{
 			display: none;
+			z-index: 999;
 		}
 
 		#show_search{
 			display: none;
 		}
+	
+	
+
+
+		
 
 		/*Header finish*/
 
 
+/*===============================================================================================================*/
 		/*Footer start*/
 
 
@@ -111,7 +131,7 @@
 			left: 0;
 			bottom:0;
 
-			background-color: orange;
+			background-color: #FF8C00;
 			margin-left: 20px;
 			margin-right: 20px;
 
@@ -127,12 +147,20 @@
 
 
 		}
+		.foot{
+			
+			grid-column-start:1;
+			grid-column-end: -1;	 
+			display: grid;
+			grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+		}
+
 
 
 		.useful_links{
 			
 			display: grid;
-			justify-self:center;
+			justify-content: center;
 
 
 		}
@@ -180,7 +208,7 @@
 
 
 		/*Contacts on footer*/
-		.contacts{
+		/* .contacts{
 			display: grid;
 			justify-self:center;
 			
@@ -190,8 +218,10 @@
 
 		.get_in_touch{
 			display: grid;
-			grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); 
+			grid-template-columns: repeat(auto-fit,minmax(140px,1fr)); 
+			
 		}
+
 
 		#contacts_logo{
 			margin-left: 40px;
@@ -202,13 +232,56 @@
 
 		#location_icon{
 			font-size: 18px;
+
+		}
+
+		#phone_icon{
+			font-size: 23px; 
+		} */
+		/*Contacts on footer finish*/
+		.contacts{
+			
+			display: grid;
+			justify-items: center;
+			
+			
+		}
+
+
+
+		.get_in_touch{
+
+			display: grid;
+			grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); 
+		}
+
+
+		.get_in_touch span{
+		
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
+
+			
+		}
+
+		#contacts_logo{
+			margin-left: 40px;
+			margin-top:10px;
+			margin-bottom: 10px;
+			font-size: 25px;
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
+		}
+
+		#location_icon{
+			font-size: 18px;
 		}
 
 		#phone_icon{
 			font-size: 23px; 
 		}
-		/*Contacts on footer finish*/
-
 
 
 
@@ -239,10 +312,11 @@
 			margin-top: 10px;
 			margin-bottom: 10px;
 			display: grid;
-			justify-self: center;
+			justify-items: center;
 			align-self: center;
 			grid-column-start: 1;
 			grid-column-end: -1;
+			
 
 		}
 
@@ -254,12 +328,16 @@
 			grid-gap: 10px;
 
 
+
+
 		}
 
 		.follow_logo>div{
 			display: grid;
 			justify-self: center;
 			align-self: center;
+			
+
 		}
 
 
@@ -389,6 +467,10 @@
 			
 			
 		}
+
+
+		/*Footer ends*/
+/*=================================================================================================*/
 		
 		
 		
@@ -397,6 +479,7 @@
 			margin: 20px;
 			margin-top: 40px;
 			background-color: white;
+			padding: 10px;
 		}
 
 		.categories_list{
@@ -448,8 +531,12 @@
 		}
 
 
+/*===========================================================================================*/		
+		/*Orange layer*/
+
+
 		.next_page{
-			border: 3px solid orange;
+			border: 3px solid #FF8C00;
 			margin-top:20px; 
 			margin-bottom: 20px;
 			margin-right: 20px;
@@ -457,19 +544,21 @@
 			background-color: white;
 
 			display: grid;
-			grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-			height: 200px;
+			grid-template-columns: repeat(1,1fr);
+			grid-template-rows: repeat(1,200px);
 
 		}
 
 
 		.next_page>div{
-			border: 1px solid orange;
-			background-color: orange;
+			border: 1px solid #FF8C00;
+			background-color: #FF8C00;
 			display: grid;
 
-		}
 
+		}
+/*=====================================================================================================*/
+	/*Rules page*/
 
 		.rules_page{
 			margin-top:20px; 
@@ -479,7 +568,8 @@
 			background-color: white;
 
 			display: grid;
-			grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));
+			grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+			
 
 
 
@@ -491,8 +581,10 @@
 		.f_rule{
 			
 			display: grid;
-			grid-template-columns: 1fr;
+			justify-content: center;
+			
 			grid-gap: 10px;
+
 			
 
 
@@ -523,6 +615,7 @@
 
 			font-size: 16px;
 			line-height: 1.6;
+
 		}
 
 
@@ -543,8 +636,9 @@
 			display: grid;
 			grid-column-start: 1;
 			grid-column-end: -1;
+			grid-template-columns: repeat(auto-fit,minmax(150px,1fr));
 			justify-items: center;
-			font-size: 40px;
+			font-size: 25px;
 		}
 
 		#intro_small{
@@ -552,7 +646,7 @@
 			grid-template-columns: 1fr;
 			font-size: 17px;
 		}
-
+/*=====================================================================================================*/
 
 		.withus{
 			
@@ -573,19 +667,14 @@
 		.lastIntro>span{
 			display: grid;
 			justify-items: center;
-			font-size: 25px;
+			font-size: 20px;
 		}
 
 
 
-		
 
 
-
-
-		
-
-
+	
 	</style>
 </head>
 <body>
@@ -595,7 +684,7 @@
 		
 		<div class="categories_list">
 			
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/1.jpg" id="first" alt="for kids">
 				</div>
@@ -605,7 +694,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_detective.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/2.jpg" alt="for kids">
 				</div>
@@ -615,7 +704,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/3.jpg" alt="for kids">
 				</div>
@@ -625,7 +714,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/4.jpg" alt="for kids">
 				</div>
@@ -635,7 +724,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/5.jpg" alt="for kids">
 				</div>
@@ -646,7 +735,7 @@
 			</a>
 
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/6.jpg" alt="for kids">
 				</div>
@@ -656,7 +745,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/7.jpg" alt="for kids">
 				</div>
@@ -666,7 +755,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/8.jpg" alt="for kids">
 				</div>
@@ -676,7 +765,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/9.jpg" alt="for kids">
 				</div>
@@ -686,7 +775,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/10.jpg" alt="for kids">
 				</div>
@@ -696,7 +785,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/11.jpg" alt="for kids">
 				</div>
@@ -707,7 +796,7 @@
 			</a>
 
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/12.jpg" alt="for kids">
 				</div>
@@ -717,7 +806,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/13.jpg" alt="for kids">
 				</div>
@@ -727,7 +816,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/14.jpg" alt="for kids">
 				</div>
@@ -737,7 +826,7 @@
 				</div>
 			</a>
 
-			<a href="" class="link_kids">
+			<a href="category_kids.php" class="link_kids">
 				<div class="category_kids">
 					<img src="img/15.jpg" alt="for kids">
 				</div>
@@ -757,18 +846,6 @@
 
 		</div>
 
-		<div>
-			
-		</div>
-
-		<div>
-			
-		</div>
-
-		<div>
-			
-
-		</div>
 		
 
 	</div>
