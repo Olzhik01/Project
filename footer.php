@@ -1,4 +1,5 @@
 <div class="footer">
+	<div class="foot">
 		<div class="useful_links">
 			
 			<span id="useful_links_logo">Useful links</span>
@@ -6,11 +7,11 @@
 			<div class="links">
 				
 				<ul>
-					<li><a href="#">Login</a></li>
-					<li><a href="#">Post Book</a></li>
-					<li><a href="#">What to read?</a></li>
-					<li><a href="#">About us</a></li>
-					<li><a href="#">Favorites</a></li>
+					<li><a href="login.php">Login</a></li>
+					<li><a href="post_book.php">Post Book</a></li>
+					<li><a href="about.php">About us</a></li>
+					<li><a href="filter.php">Filter</a></li>
+					<li><a href="favorites.php">Favorites</a></li>
 				</ul>
 			</div>
 
@@ -22,12 +23,12 @@
 			
 			<div class="get_in_touch">
 				<span id="contacts_logo">Contacts</span>
-				<scan id="location"><i id="location_icon" class="fa fa-map-marker"></i> SDU,Kaskelen,Almaty,KZ</scan>
+				<span id="location"><i id="location_icon" class="fa fa-map-marker"></i> SDU,Kaskelen,Almaty,KZ</span>
 
-				<scan id="phone"><i id="phone_icon" class="fa fa-mobile-phone"></i> Telephone: +77024869876 </scan>
+				<span id="phone"><i id="phone_icon" class="fa fa-mobile-phone"></i> Telephone: +77024869876 </span>
 
-				<scan id="fax"><i id="faxIcon" class="fa fa-fax"></i> FAX: +1809 876</scan>
-				<scan id="email"><i id="emailIcon" class="fa fa-envelope"></i> Email: <a id="stu" href="#"> 180103273@stu.sdu.edu.kz</a></scan>
+				<span id="fax"><i id="faxIcon" class="fa fa-fax"></i> FAX: +1809 876</span>
+				<span id="email"><i id="emailIcon" class="fa fa-envelope"></i> Email: <a id="stu" href="#"> 180103273@stu.sdu.edu.kz</a></span>
 				
 
 			</div>
@@ -71,7 +72,7 @@
 			</div>
 
 		</div>
-		
+	</div>
 		<div class="rights">
 			<p>All rights reserved &copy; <?=date('Y')?></p>
 			
