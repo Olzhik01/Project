@@ -6,252 +6,15 @@
 <link rel="icon" href="img/favicon.ico" type="image/ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" src="js/main.js"></script>
 <link rel="stylesheet" type="text/css" href="css/media.css">
-<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="js/main.js"></script>
+
+
 
 
 	<style type="text/css">
 
-		@media screen and (max-width: 1230px) {
-			
-			
-			
-			.header_links a{
-				position:relative;
-				top:5px;
-				
-
-			}
- 		 	.header_links a:not(:first-child) {
- 		 		display: none;
-
- 		 	}
-  			.header_links a.icon {
-    			float: right;
-    			display: block;
-  			}
-  			.header_links a.icon:hover {
-    			border-bottom: none;
-  			}
-
-
-		}
-
-		@media screen and (max-width: 1230px) {
-  			.header_links.responsive {
-  				position: absolute;
-  				right: 20px;
-  				width: 130px;
-  				background-color: orange;
-  			}
-  			
-
-  			.header_links.responsive .icon {
-   			 	position:relative;
-   			 	top:0px;
-   			 	right: 0px;
-    		
-    		}
-  			
-
-  			.header_links.responsive a {
-
-    			float: none;
-    			display: block;
-    			text-align: center;
-    			margin-bottom: 5px;
-  			}
-		}
-
-
-		@media screen and (max-width: 890px){
-      		
-      		#logo{
-        		position: absolute;
-        		font-size: 25px;
-        		top:21px;
-      		}
-
-      		.search_container{
-        		position: absolute;
-        		left:160px;
-       			top:21px;
-        		width: 400px;
-        
-      		}
-
-      		.search_container input[type=text]{
-        		width: 300px;
-
-      		}
-    
-    	} 
-
-
-		@media screen and (max-width: 670px){
-			#logo{
-				position: absolute;
-				font-size: 23px;
-				top:25px;
-				left:15px;
-			}
-
-			.search_container{
-				position: absolute;
-				left:130px;
-				top:26px;	
-			}
-
-
-			.search_container input[type=text]{
-				width: 200px;
-				height: 25px;
-			}
-
-			.search_container button{
-				height: 29px;
-			}
-		}
-
-
-
-
-	@media screen and (max-width: 480px){
-      .search_container{
-        position: absolute;
-        left:120px;
-        top:26px; 
-      }
-
-      .search_container input[type=text]{
-        width: 150px;
-        height: 25px;
-      }
-
-      .search_container button{
-        height: 29px;
-      }
-
-      
-
-      .header_links.responsive {
-          position: absolute;
-          right: 0px;
-          width: 130px;
-          background-color: orange;
-        }
-
-        .header_links.responsive .icon {
-          position:relative;
-          top:0px;
-          right: 0px;
-        
-        }
-
-        .header_links .icon{
-          position: absolute;
-          right: -20px;
-        }
-
-        .header_links.responsive a {
-          font-size: 15px;
-        }
-
-
-    }
-
-    @media screen and (max-width: 385px){
-
-      .search_container {
-        display: none;
-      }
-
-
-    }
-
-
-    @media screen and (max-width: 355px){
-      .footer{
-        display: grid;
-        grid-template-columns: repeat(1,1fr);
-        grid-gap: 0px;
-        font-size: 15px;
-      }
-
-      #useful_links_logo{
-        margin: 0;
-          display: grid;
-          justify-self:center; 
-        font-size: 18px;
-      }
-
-      .useful_links{
-      
-        display: grid;
-        align-self:center;
-
-
-      }
-
-      .links li{
-        margin-left: -30px;
-        margin-bottom: 5px; 
-      }
-
-
-      #contacts_logo{
-        margin: 0;
-        font-size: 18px;
-        display: grid;
-        justify-self: center;
-    }
-
-
-
-    #follow_word{
-      font-size: 18px;
-      
-      display: grid;
-      justify-self: center;
-      align-self: center;
-      grid-column-start: 1;
-      grid-column-end: -1;
-
-    }
-    
-    .follow_logo {
-      
-      display: grid;
-
-      grid-gap: 3px;
-
-
-    }
-}
-
-  @media screen and (max-width: 200px){
-      #logo{
-        position: absolute;
-        top:10px;
-        left:20px;
-      }
-      
-
-      .header_links {
-        position: absolute;
-        left:10px;
-        top:40px;
-        
-        
-      }
-    }
-
-    
-    
-    
-
-
+		
 
 		
 
@@ -341,6 +104,7 @@
 
 		.header_links .icon{
 			display: none;
+			z-index: 999;
 		}
 
 		#show_search{
@@ -371,23 +135,28 @@
 			margin-right: 20px;
 
 			display: grid;
-			grid-template-columns: repeat(3,1fr);
+			grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 			grid-gap:10px;
 
 			margin-top:10px;
 
-			grid-auto-rows: minmax(50px,auto); 
-
 			
+		}
 
 
+		.foot{
+			
+			grid-column-start:1;
+			grid-column-end: -1;	 
+			display: grid;
+			grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
 		}
 
 
 		.useful_links{
 			
 			display: grid;
-			justify-self:center;
+			justify-content: center;
 
 
 		}
@@ -436,16 +205,29 @@
 
 		/*Contacts on footer*/
 		.contacts{
+			
 			display: grid;
-			justify-self:center;
+			justify-items: center;
+			
 			
 		}
 
 
 
 		.get_in_touch{
+
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); 
+		}
+
+
+		.get_in_touch span{
+		
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
+
+			
 		}
 
 		#contacts_logo{
@@ -453,6 +235,9 @@
 			margin-top:10px;
 			margin-bottom: 10px;
 			font-size: 25px;
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
 		}
 
 		#location_icon{
@@ -474,6 +259,7 @@
 		/*Follow us on footer*/
 
 		.follow_us{
+			
 			
 			
 			
@@ -712,8 +498,8 @@
 			background-color: white;
 
 			display: grid;
-			grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
-			height: 200px;
+			grid-template-columns: repeat(1,1fr);
+			grid-template-rows: repeat(1,200px);
 
 		}
 
@@ -796,10 +582,9 @@
 		#intro_big{
 		
 			display: grid;
-			grid-column-start: 1;
-			grid-column-end: -1;
+			
 			justify-items: center;
-			font-size: 40px;
+			font-size: 25px;
 		}
 
 		#intro_small{
@@ -828,11 +613,13 @@
 		.lastIntro>span{
 			display: grid;
 			justify-items: center;
-			font-size: 25px;
+			font-size: 20px;
 		}
 
 		/*index.php end*/
+/*====================================================================================================================*/
 		/*about.php*/
+
 		.our_history{
 			border: 1px solid white;
 			background-color: white;
@@ -851,15 +638,17 @@
 			grid-column-start: 1;
 			grid-column-end: -1;
 			justify-items: center;
-			font-size: 40px;
+			font-size: 30px;
+			margin-bottom: 10px;
 
 		}
 
 		#hist_word{
 			display: grid;
 			grid-template-columns: 1fr;
-			font-size: 20px;
+			font-size: 18px;
 			text-indent: 20px;
+
 
 		}
 
@@ -949,18 +738,7 @@
 
 		</div>
 
-		<div>
 			
-		</div>
-
-		<div>
-			
-		</div>
-
-		<div>
-			
-
-		</div>
 		
 
 	</div>
