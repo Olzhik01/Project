@@ -971,10 +971,6 @@
 	<?php require_once "blocks/footer.php" ?>
 
 
-<?php 
-	mysqli_close($mysql); 
-	
 
-?>
 </body>
 </html>
