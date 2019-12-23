@@ -58,7 +58,7 @@
     		}
 
     		#image{
-      			width: 120px;
+      			width: 118px;
       			height: 180px;
 
       		}
@@ -69,7 +69,7 @@
 
 
       		#book-view-text{
-      			font-size: 13px;
+      			font-size: 14px;
       		}
     		
     		
@@ -206,27 +206,50 @@
 		}
 		/*Contacts on footer*/
 		.contacts{
+			
 			display: grid;
-			justify-self:center;
+			justify-items: center;
+			
 			
 		}
+
+
+
 		.get_in_touch{
+
 			display: grid;
 			grid-template-columns: repeat(auto-fill,minmax(150px,1fr)); 
+		}
+
+
+		.get_in_touch span{
+		
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
+
 			
 		}
+
 		#contacts_logo{
 			margin-left: 40px;
 			margin-top:10px;
 			margin-bottom: 10px;
 			font-size: 25px;
+			display: grid;
+			grid-column-start: 1;
+			grid-column-end: -1;
 		}
+
 		#location_icon{
 			font-size: 18px;
 		}
+
 		#phone_icon{
 			font-size: 23px; 
 		}
+
+
 		/*Contacts on footer finish*/
 		/*Follow us on footer*/
 		.follow_us{
@@ -511,6 +534,9 @@
 		margin-top: 20px;
 		margin-bottom: 20px;
 		
+		position: relative;
+		min-height: 100vh;
+		
 	}
 
 
@@ -675,6 +701,10 @@
 							<form action=\"#\" method=\"get\">
 								<input type=\"submit\" name=\"submit\" value=\"Add to cart\">
 							</form>
+
+							<a href=\"update.php?book_id=".$array[$i]['book_id']."\" id=\"more-link\">Update</a>
+
+							<a href=\"user_delete.php?book_id=".$array[$i]['book_id']."\" id=\"more-link\">Delete</a>
 							
 						</div>	
 					</div>
