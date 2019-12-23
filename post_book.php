@@ -1,8 +1,100 @@
+
+<?php 
+	//session_start();
+	
+
+	
+	/*if(isset($_POST['submit'])){
+		
+		$file=$_FILES['file'];
+
+
+		$file_name = $file['name'];
+		$file_type=$file['type'];
+		$file_tmp_name=$file['tmp_name'];
+		$file_error=$file['error'];
+		$file_size=$file['size'];
+		$check = 1;
+
+		if(getimagesize($file_tmp_name)==false){
+			echo "Please upload only image";
+			$check=0;
+		}
+
+		$file_ext = explode('.',$file_name); /*точкадан кейн боледи jpg алу ушин
+		$fileActualExt = strtolower(end($file_ext));/*кишкентайга айналдырып барлыгын сонгы массивты алады
+
+
+		$allowedExt = array('jpg','jpeg','png','pdf','jfif');
+
+		if(!in_array($fileActualExt, $allowedExt)){
+			echo "Sorry, only JPG, JPEG, PNG & JFIF files are allowed.";
+			$check=0;
+		}
+
+		if ($file_error===1) {
+			echo "There was an error on uploading your file.Please check your file!";
+			$check=0;
+		}
+
+
+		if ($check==0) {
+			echo "Sorry,your file was not uploaded";
+		}
+		else{
+			$fileNameNew = uniqid('',true).".".$fileActualExt;
+			$fileDestination = "uploads/".$fileNameNew;
+			move_uploaded_file($file_tmp_name, $fileDestination);
+			
+		}
+
+
+	
+
+		//if($error==0){
+			$mysql = mysqli_connect('localhost','root','','findbook');
+
+			$bookName = $_POST['book_name'];
+			$author = $_POST['book_author'];
+			$numPages = $_POST['num_pages'];
+			$date = $_POST['date'];
+			$status = $_POST['status'];
+			$age = $_POST['age_restric'];
+			$format = $_POST['format'];
+			$weight = $_POST['weight'];
+			$cover = $_POST['cover'];
+			$conName = $_POST['contact_name'];
+			$conPhone = $_POST['contact_phone'];
+			$text = $_POST['present_text'];
+			$overview = $_POST['overview_text'];
+			$category=$_POST['category'];
+
+			if(!$mysql){
+				die("Connection failed".mysqli_connect_error());
+			}
+	
+	$sql = "INSERT INTO `books`(`book_id`, `book_name`, `book_author`, `num_pages`, `book_release`, `book_status`, `age_restric`, `book_format`, `book_weight`, `book_cover`, `contact_name`, `contact_phone`, `present_text`, `overview_text`, `book_category`, `book_image`) VALUES (null,'$bookName','$author','$numPages','$date','$status','$age','$format','$weight','$cover','$conName','$conPhone','$text','$overview','$category','$fileNameNew')";*/
+
+	/*if (mysqli_query($mysql,$sql)) {
+		echo "New record";
+	}
+	else{
+		echo mysqli_error($mysql);
+	}*/
+
+//}
+//}
+
+ 	
+ 	
+ ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Post book</title>
-	<meta charset="utf-8">
+<title>Post book</title>
+<meta charset="utf-8">
 <link rel="icon" href="img/favicon.ico" type="image/ico">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -679,7 +771,7 @@
 			display: grid;
 			grid-gap: 10px;
 			grid-template-columns: repeat(auto-fit,minmax(150px, 220px));
-			grid-template-rows: repeat(15,30px);
+			grid-template-rows: repeat(11,30px);
 			justify-content: center;
 
 		}
@@ -708,6 +800,7 @@
 			grid-template-rows: repeat(auto-fit,minmax(500px,1fr));
 
 		}
+
 		.tab-exit{
 			margin: 20px;
 			padding: 20px;
@@ -735,13 +828,7 @@
 </head>
 <body>
 	<?php require_once "blocks/header.php" ?>
-	<!-- <script type="text/javascript">
-		function submitForm(action) {
-    		var form = document.getElementById('form1');
-    		form.action = action;
-    		form.submit();
-  		}
-	</script> -->
+	
 	<?php
 		if(isset($_COOKIE['user'])):
 	?>
@@ -775,11 +862,24 @@
 
 				
 
+					<textarea id="text" rows="4" cols="50" name="present_text" placeholder="present text of overview" required="" ></textarea>
+					<div>
+						<span id="lenText">0</span>
+						<span>Characters</span><br>
+						<span>Max 442 characters</span>
+					</div>
 
-					<input type="text" name="present_text" placeholder="present text of overview" required="">
-					<input type="text" name="overview_text" placeholder="overview text" required="">
-
-					<select name="category" required>
+					
+					
+					<textarea id="btext" rows="8" cols="50" name="overview_text" placeholder="overview text" required=""></textarea>
+					<div>
+						<span id="lenbText">0</span>
+						<span>Characters</span><br>
+						<span>Max 500 characters</span>
+					</div>
+					
+					
+					<select class="selection" name="category" required>
 						<option value=""></option>
 						<option value="kids">Детям</option>
 						<option value="detective">Детективы</option>
@@ -793,14 +893,14 @@
 						<option value="roman">Романы</option>
 						<option value="triller">Триллеры</option>
 						<option value="soul">Духовная литература</option>
-						<option value="sciencs">Научно-Образовательная</option>
+						<option value="science">Научно-Образовательная</option>
 						<option value="boevik">Боевики</option>
 						<option value="journey">Приключения</option>
 					</select>
 
 					
     					
-    				<input type="file" name="fileToUpload" id="fileToUpload" required="">
+    				<input type="file" name="file" required="">
     				
     				<input type="submit" value="Post Book" name="submit">
 					
@@ -839,10 +939,42 @@
 			
 	<?php endif;?>
 
+	<script type="text/javascript">
+		var text = document.getElementById("text");
+		var lenText = document.getElementById("lenText");
+		var btext = document.getElementById("btext");
+		var lenbText = document.getElementById("lenbText");
+	
+
+		text.addEventListener("keyup",function(){
+			var characters = text.value.split('');
+			lenText.innerText=characters.length;
+			lenText.style.color="green";
+			
+		});
+
+		btext.addEventListener("keyup",function(){
+			var characters = btext.value.split('');
+			lenbText.innerText=characters.length;
+			lenbText.style.color="green";
+			
+		});
+
+		
+		
+
+
+	</script>
 
 
 
 	<?php require_once "blocks/footer.php" ?>
 
+
+<?php 
+	mysqli_close($mysql); 
+	
+
+?>
 </body>
 </html>
