@@ -1,29 +1,53 @@
-.form-exit{
-			background-color: white;
-			margin: 20px;
-			display: grid;
-			justify-content: center;
-			grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); 
+<?php
 
-			grid-template-rows: repeat(auto-fit,minmax(500px,1fr));
-
-		}
-
-		.tab-exit{
-			margin: 20px;
-			padding: 20px;
-			border: 2px solid #FF8C00;
-			display: grid;
-
-			grid-template-columns: repeat(2,minmax(100px, 1fr));
-			grid-template-rows: 50px;
-			justify-self: center;
-
-			grid-gap: 20px;
+	print_r($_GET);
+	
+ 	$id=$_GET['book_id'];
 
 
-		}
-		#exit{
-			color: orange;
-			border-bottom: 1px solid orange;
-		}
+	$mysql = mysqli_connect('localhost','root','','findbook');
+
+	
+
+	if(!$mysql){
+		die("Connection failed".mysqli_connect_error());
+	}
+	
+
+
+		
+	$sql="DELETE FROM `favorite_books` WHERE `favorite_book_id`='$id'";
+	$result=mysqli_query($mysql,$sql);
+		
+		
+	
+	
+	
+
+ 	
+
+
+ 	
+
+ 	mysqli_close($mysql);
+
+ 	header("Location:index.php");
+
+ 	
+	
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
