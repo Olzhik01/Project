@@ -26,13 +26,21 @@ if(count($user)==0){
 	exit();
 }
 
-if($login==="admin" && $password=="admin"){
+else if($login==="admin" && $password=="admin"){
 	header("Location: admin.php");
 }
+else{
+
+
+print_r($user);
+setcookie('user',$user['name'],time()+3600, "/");
 
 $mysql->close();
 
 
+header("Location:index.php");
+
+}
 
 
 ?>
