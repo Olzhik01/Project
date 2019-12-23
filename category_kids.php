@@ -630,6 +630,14 @@
 		grid-gap: 20px;
 		
 	}
+	#more-link-add{
+		border-bottom:1px solid orange;
+		width: 112px;
+	}
+
+	#more-link-add:hover{
+		color: orange;
+	}
 
 	#more-link{
 		border-bottom: 1px solid orange;
@@ -698,9 +706,7 @@
 						<div class=\"book-links\">
 							<a href=\"book.php?book_id=".$array[$i]['book_id']."\" id=\"more-link\">More</a>
 
-							<form action=\"#\" method=\"get\">
-								<input type=\"submit\" name=\"submit\" value=\"Add to cart\">
-							</form>
+							<a href=\"favorites.php?book_id=".$array[$i]['book_id']."\" id=\"more-link-add\">Add to favorites</a>
 
 							<a href=\"update.php?book_id=".$array[$i]['book_id']."\" id=\"more-link\">Update</a>
 
