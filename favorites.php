@@ -1,4 +1,5 @@
 <?php
+	
 
 	if(isset($_GET['book_id'])){
 	$id=$_GET['book_id'];
@@ -732,7 +733,7 @@
 		.container-category{
 		margin-top: 20px;
 		margin-bottom: 20px;
-		border: 2px solid black;
+		
 		position: relative;
 		min-height: 100vh;
 		display: grid;
@@ -916,7 +917,7 @@
 				<?php 
 					$check=0;
 					for ($i=0; $i < count($array); $i++) { 
-						if($array[$i]['book_category']=='detective'){
+						
 							echo "<div class=\"book\">
 
 					
@@ -953,7 +954,7 @@
 										
 				</div>";
 				$check=1;
-						}
+						
 
 					}
 					if($check=0){
